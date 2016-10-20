@@ -1,0 +1,23 @@
+"WYP£ATA STÓWKI (PI¥TECZEK)"
+1. W£Ó¯ KARTÊ
+- weryfikuj kartê: sprawdŸ wa¿noœæ
+-- sprawdz wa¿noœæ (data)
+-- sprawdz czy obs³ugiwana
+-- czy podrobiona/kradziona/etc.
+--- kontakt z bankiem. sprawdzenie na liœcie, je¿eli ok, to ...
+2. WYBIERZ JÊZYK
+3. PODAJ PIN
+4. ZWERYFIKUJ PIN
+   -SPRAWDZ ILOŒÆ CYFR: JE¯ELI = 4 - > DALEJ, JE¯ELI != 4 > WYŒWIETL KOMUNINKAT "B£ÊDNY PIN" - > MENU : SPRÓBUJ PONOWNIE, ANULUJ
+   - DALEJ: CZY ZGADZA SIÊ Z INFO NA KARCIE? - > DALEJ, JE¯ELI NIE - > KOMUNIKAT B£ÊDY
+   - DALEJ: MENU CZYNNOŒCI
+USER INPUT:WYBRANO: WYP£ATA, WYBRANO: ILOŒÆ (100), WYBRANO: NOMINA£Y (5x20)
+-sprawdzenie czy wystarczy œrodków na koncie:
+ --po³¹cz siê z bankiem
+ -- spytaj o stan konta
+ -- sprawdz limit dzienny
+ --stan konta >=100: ok, stan konta <100 ->komunikat "nie masz wystarczaj¹cej kasy"
+ -- roz³¹cz siê z bankiem
+ -komunikat: czy drukowaæ potwierdzenie? tak -> drukuj, nie-> niedrukuj
+ -wydaj kartê
+--- je¿eli wszystkie warunki OK, to wyp³ata kwoty
