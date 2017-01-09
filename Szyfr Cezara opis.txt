@@ -1,0 +1,25 @@
+\\Tutaj deklarujemy funkcje poprzez komende def. po defie jest nazwa funkcji (np. zakodowanie) i w nawiasie
+zmienne które trzeba podaæ funkcji by zadzia³a³a (wywo³uj¹c funkcjê zakodowanie musisz jej podaæ argument "wyraz" i "przesuniêcie")
+
+def zakodowanie(wyraz, przesuniecie): \\Deklarujemy funkcjê zakodowanie sluzaca do zakodowywania tekstu (musi dostaæ 2 wartoœci: wyraz i przesuniecie)
+  zakodowanytext = "" \\Tworzy pust¹ zmienn¹ zakodowanytext
+  for litera in wyraz: \\dla ka¿dej litery w tym wyrazie zrób te dwie poni¿sze linijki
+    uni = ord(litera) \\do zmiennej uni tymczasowo przypisz wartoœæ ASCII danej litery
+    zakodowanytext = zakodowanytext + chr(uni + przesuniecie) \\do tego co teraz jest w zmiennej zakodowany tekst dodaj literê, która w ASCII jest o wartoœæ "przesuniêcie" dalej od uni (a uni to wartoœæ ascii naszej prawdziwej litery, wiec zakodowana ma ASCII uni+przesuniecie)
+  return zakodowanytext \\jak skoñczy siê petla to mamy ca³y zakodowany wyraz i zwracamy go jako wynik dzia³ania funkcji
+
+
+def odkodowanie(wyraz, przesuniecie): \\analogiczne dzia³anie deklarujemy funkcje odkodowuj¹c¹ nasz tekst
+  odszyfrowanytext = ""
+  for litera in wyraz:
+    uni = ord(litera)
+    odszyfrowanytext = odszyfrowanytext + chr(uni - przesuniecie)
+  return odszyfrowanytext
+
+  
+\\program dopiero tutaj zaczyna dzialac
+text = "kasia" \\do zmiennej tekst przypisz wartoœæ Kasia
+przesun = 3 \\ do zmiennej przesun przypisz wartoœæ 3
+nowytext = zakodowanie(text, przesun) \\ do zmiennej nowytext przypisz wartoœæ zwracan¹ przez funkcjê zakodowanie(text,przesun)
+print (nowytext) \\wyœwietl nowy text (teraz jest zakodowany)
+print (odkodowanie(nowytext, przesun)) \\ wyœwietl wartoœæ zwracan¹ przez funkcjê odkodowanie(nowytext,przesun) (tutaj poprawna wartoœæ) 
